@@ -1,17 +1,13 @@
 {
-  "name": "estate_agent_webapplication",
+  "name": "estate_agent_website",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "bootstrap": "^5.3.3",
     "cra-template": "1.2.0",
-    "estate_agent_webapplication": "file:",
+    "estate_agent_website": "file:",
     "react": "^19.0.0",
-    "react-bootstrap": "^2.10.7",
     "react-dom": "^19.0.0",
-    "react-router-dom": "^7.1.1",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^4.2.4"
+    "react-scripts": "5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
