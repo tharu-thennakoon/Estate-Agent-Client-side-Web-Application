@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './Navbar.css'; // Custom CSS for color scheme
-import logo from '../assets/logo.png'; // Import the logo
+import './Navbar.css';
+import logo from '../assets/logo.png';
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-black">
       <div className="container-fluid">
@@ -16,35 +22,34 @@ const Navbar = () => {
         <button
           className="navbar-toggler"
           type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
+          onClick={toggleMenu}
           aria-controls="navbarNav"
-          aria-expanded="false"
+          aria-expanded={isOpen}
           aria-label="Toggle navigation"
         >
           <span className="navbar-toggler-icon"></span>
         </button>
 
         {/* Navbar Links */}
-        <div className="collapse navbar-collapse" id="navbarNav">
+        <div className={`collapse navbar-collapse ${isOpen ? 'show' : ''}`} id="navbarNav">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <Link to="/" className="nav-link">
+              <Link to="/" className="nav-link" onClick={() => setIsOpen(false)}>
                 Home
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/properties" className="nav-link">
+              <Link to="/properties" className="nav-link" onClick={() => setIsOpen(false)}>
                 Properties
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/about" className="nav-link">
+              <Link to="/about" className="nav-link" onClick={() => setIsOpen(false)}>
                 About
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/contact" className="nav-link">
+              <Link to="/contact" className="nav-link" onClick={() => setIsOpen(false)}>
                 Contact
               </Link>
             </li>
