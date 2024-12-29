@@ -1,6 +1,6 @@
 /* Navbar base styles */
 .navbar {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(128, 123, 123, 0.1);
   width: 100%;
   position: fixed;
   top: 0;
