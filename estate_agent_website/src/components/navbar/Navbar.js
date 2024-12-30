@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
-import logo from '../assets/logo.png';
+import logo from '../../assets/logo.png';
+import menuIcon from '../../assets/menu.png'; // Import the menu icon image
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,7 +19,7 @@ const Navbar = () => {
           <img src={logo} alt="Logo" className="navbar-logo" />
         </Link>
 
-        {/* Toggle Button for Mobile View */}
+        {/* Toggle Button for Mobile View with Custom Image */}
         <button
           className="navbar-toggler"
           type="button"
@@ -27,12 +28,12 @@ const Navbar = () => {
           aria-expanded={isOpen}
           aria-label="Toggle navigation"
         >
-          <span className="navbar-toggler-icon"></span>
+          <img src={menuIcon} alt="Menu" className="navbar-toggler-icon" />
         </button>
 
         {/* Navbar Links */}
         <div className={`collapse navbar-collapse ${isOpen ? 'show' : ''}`} id="navbarNav">
-          <ul className="navbar-nav ms-auto">
+          <ul className="navbar-nav mx-auto">
             <li className="nav-item">
               <Link to="/" className="nav-link" onClick={() => setIsOpen(false)}>
                 Home
@@ -56,7 +57,7 @@ const Navbar = () => {
           </ul>
 
           {/* Sign In and Log In Buttons */}
-          <div className="d-flex">
+          <div className="d-flex align-items-center">
             <button className="btn btn-success me-2">Sign In</button>
             <button className="btn btn-outline-light">Log In</button>
           </div>
