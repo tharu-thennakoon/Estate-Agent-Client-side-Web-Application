@@ -1,0 +1,33 @@
+/* App.css */
+
+.layout {
+    height: 100vh;
+    max-width: 1366px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: white; /* Default color */
+  }
+  
+  @media (max-width: 1366px) {
+    .layout {
+      background-color: rgb(216, 164, 145);
+      max-width: 1280px;
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .layout {
+      background-color: cornflowerblue;
+      max-width: 768px;
+    }
+  }
+  
+  @media (max-width: 738px) {
+    .layout {
+      background-color: red;
+      max-width: 640px;
+    }
+}
+  
