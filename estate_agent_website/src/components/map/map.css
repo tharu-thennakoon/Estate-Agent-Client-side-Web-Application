@@ -1,0 +1,8 @@
+.mapContainer {
+    height: 500px; /* Adjust height as needed */
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  

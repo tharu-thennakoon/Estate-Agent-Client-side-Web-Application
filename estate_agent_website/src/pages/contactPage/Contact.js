@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Contact.css';
+import Footer from '../../components/footer/Footer'; // Updated path for Footer component
 
 const Contact = () => {
   const [form, setForm] = useState({
@@ -68,6 +69,8 @@ const Contact = () => {
           <p>Address: Placeholder address</p>
         </div>
       </div>
+
+      <Footer /> {/* Footer component added here */}
     </div>
   );
 };

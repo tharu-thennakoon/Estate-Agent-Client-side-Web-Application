@@ -1,70 +1,40 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import './Navbar.css';
+import { useState } from 'react';
 import logo from '../../assets/logo.png';
-import menuIcon from '../../assets/menu.png'; // Import the menu icon image
+import menuIcon from '../../assets/menu.png';
 
-const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+function Navbar() {
+  const [open, setOpen] = useState(false);
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-black">
-      <div className="container-fluid">
-        {/* Logo */}
-        <Link to="/" className="navbar-brand">
-          <img src={logo} alt="Logo" className="navbar-logo" />
-        </Link>
+    <nav>
+      <div className="left">
+        <a href="/" className="logo">
+          <img src={logo} alt="logo" />
+        </a>
+        <a href="/">Home</a>
+        <a href="/properties">Properties</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+      </div>
 
-        {/* Toggle Button for Mobile View with Custom Image */}
-        <button
-          className="navbar-toggler"
-          type="button"
-          onClick={toggleMenu}
-          aria-controls="navbarNav"
-          aria-expanded={isOpen}
-          aria-label="Toggle navigation"
-        >
-          <img src={menuIcon} alt="Menu" className="navbar-toggler-icon" />
-        </button>
-
-        {/* Navbar Links */}
-        <div className={`collapse navbar-collapse ${isOpen ? 'show' : ''}`} id="navbarNav">
-          <ul className="navbar-nav mx-auto">
-            <li className="nav-item">
-              <Link to="/" className="nav-link" onClick={() => setIsOpen(false)}>
-                Home
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link to="/properties" className="nav-link" onClick={() => setIsOpen(false)}>
-                Properties
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link to="/about" className="nav-link" onClick={() => setIsOpen(false)}>
-                About
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link to="/contact" className="nav-link" onClick={() => setIsOpen(false)}>
-                Contact
-              </Link>
-            </li>
-          </ul>
-
-          {/* Sign In and Log In Buttons */}
-          <div className="d-flex align-items-center">
-            <button className="btn btn-success me-2">Sign In</button>
-            <button className="btn btn-outline-light">Log In</button>
-          </div>
+      <div className="right">
+        <a href="/">Sign in</a>
+        <a href="/" className="register">Sign up</a>
+        <div className="menuIcon">
+          <img src={menuIcon} alt="menu" onClick={() => setOpen((prev) => !prev)} />
+        </div>
+        <div className={open ? 'menu active' : 'menu'}>
+          <a href="/">Home</a>
+          <a href="/properties">Properties</a>
+          <a href="/about">About</a>
+          <a href="/contact">Contact</a>
+          <a href="/">Sign in</a>
+          <a href="/">Sign up</a>
         </div>
       </div>
     </nav>
   );
-};
+}
 
 export default Navbar;

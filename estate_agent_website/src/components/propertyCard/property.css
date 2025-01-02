@@ -1,0 +1,110 @@
+.property-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease-in-out;
+}
+
+.property-card:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.property-image {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  object-fit: cover; /* Ensures the image covers the area */
+}
+
+.property-info {
+  margin-top: 15px;
+}
+
+.property-info h3 {
+  font-size: 1.5em;
+  margin: 0;
+  color: #333;
+}
+
+.property-info p {
+  font-size: 1em;
+  color: #777;
+  margin-top: 5px;
+}
+
+.property-details {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  font-size: 0.9em;
+  color: #555;
+}
+
+.property-details span {
+  font-weight: bold;
+}
+
+button {
+  background-color: #51b896; /* Primary color */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin-top: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #449c7d; /* Darker shade of primary color */
+}
+
+button:active {
+  background-color: #3b7f68; /* Darker color on click */
+}
+
+.favourite-button {
+  background-color: #51b896; /* Primary color */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.favourite-button:hover {
+  background-color: #449c7d; /* Darker shade of primary color */
+}
+
+.favourite-button:active {
+  background-color: #3b7f68; /* Darker color on click */
+}
+
+.view-details-button {
+  background-color: #51b896; /* Primary color */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin-top: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.view-details-button:hover {
+  background-color: #449c7d; /* Darker shade of primary color */
+}
+
+.view-details-button:active {
+  background-color: #3b7f68; /* Darker color on click */
+}

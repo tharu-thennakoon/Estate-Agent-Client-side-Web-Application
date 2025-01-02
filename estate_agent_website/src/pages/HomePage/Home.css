@@ -1,0 +1,72 @@
+/* General Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Removes scrollbars */
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/* Home Page Styles */
+.homePage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #fcf5f3;
+  overflow: hidden;
+  position: relative;
+}
+
+.imgcontainer {
+  position: absolute;
+  top: 50px; /* Move the image container 50px from the top */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 80vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.textcontainer {
+  position: absolute; /* Overlays the background */
+  text-align: center;
+  color: white; /* White text for contrast */
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5); /* Optional: Semi-transparent overlay */
+  border-radius: 10px;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .imgcontainer {
+    width: 100%; /* For smaller screens, full width */
+    height: 70vh; /* Increased height for smaller screens */
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}

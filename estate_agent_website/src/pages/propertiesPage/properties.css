@@ -1,0 +1,79 @@
+.propertiesPage {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    height: 100vh; /* Full viewport height */
+    max-width: 1200px; /* Reduced width of the page */
+    margin: 0 auto; /* Center the page */
+  }
+  
+  .propertiesList {
+    flex: 0 0 60%; /* Set width of properties list to 60% */
+    margin-right: 20px;
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: calc(100vh - 40px); /* Adjust height to fit content and padding */
+    box-sizing: border-box;
+  }
+  
+  .mapSection {
+    flex: 0 0 35%; /* Set width of map section to 35% */
+    height: 500px; /* Adjust the height as needed */
+  }
+  
+  .property-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .property-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .property-info {
+    margin-top: 10px;
+  }
+  
+  .property-details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .property-details span {
+    font-weight: bold;
+  }
+
+  .favoritesBar {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f8f8f8;
+    border-top: 2px solid #ddd;
+  }
+  
+  .favoriteProperties {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .favoriteItem {
+    background-color: #fff;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: inline-block;
+    max-width: 200px;
+  }
+  
+  .favoriteItem p {
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  

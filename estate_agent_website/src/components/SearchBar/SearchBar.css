@@ -1,0 +1,25 @@
+.searchBar .tenure {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.searchBar .tenure button {
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  background-color: white;
+  color: #333;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.searchBar .tenure button.active {
+  background-color: #51b896; /* Highlight for active button */
+  color: white;
+  border-color: #51b896;
+}
+
+.searchBar .tenure button:hover {
+  background-color: #f1f1f1; /* Slight grey background on hover */
+}
