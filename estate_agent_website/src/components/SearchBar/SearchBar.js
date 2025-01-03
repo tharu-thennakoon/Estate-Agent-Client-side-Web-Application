@@ -28,12 +28,12 @@ const SearchBar = ({ onSearch, navigateToFilterPage, advanced = false }) => {
 
   const validate = () => {
     const newErrors = {};
-    
+
     // Validate Location
     if (!query.location) {
       newErrors.location = 'Location is required';
     }
-    
+
     // Validate Price Range
     if (query.minPrice && query.maxPrice && query.minPrice > query.maxPrice) {
       newErrors.priceRange = 'Min Price cannot be greater than Max Price';
@@ -104,9 +104,9 @@ const SearchBar = ({ onSearch, navigateToFilterPage, advanced = false }) => {
         />
         {errors.location && <span className="error">{errors.location}</span>}
 
-        {/* Advanced Fields (Only visible on FilterPage) */}
+        {/* Advanced Fields - Only Visible on FilterPage */}
         {advanced && (
-          <>
+          <div className="advanced-fields">
             {/* Property Type Field */}
             <select
               name="propertyType"
@@ -171,7 +171,7 @@ const SearchBar = ({ onSearch, navigateToFilterPage, advanced = false }) => {
               onChange={handleInputChange}
             />
             {errors.postcodeArea && <span className="error">{errors.postcodeArea}</span>}
-          </>
+          </div>
         )}
 
         {/* Search Button */}

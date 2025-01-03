@@ -102,7 +102,7 @@ nav .right .user span {
 /* Profile section */
 nav .right .user .profile {
     padding: 12px 24px;
-    background-color: #fece51;
+    background-color: #51b896;
     cursor: pointer;
     border: none;
     position: relative;
@@ -124,7 +124,7 @@ nav .right .user .profile .notification {
 
 /* Register button */
 nav .right .register {
-    background-color: #fece51;
+    background-color: #51b896;
 }
 
 /* Menu Icon */

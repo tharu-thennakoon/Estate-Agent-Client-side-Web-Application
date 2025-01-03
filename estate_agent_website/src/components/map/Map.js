@@ -1,6 +1,6 @@
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import L from 'leaflet'; // Import leaflet to create custom icons
-import properties from '../../components/lib/properties.json';
+import properties from '../../assets/properties.json';
 import pinMap from '../../assets/pinMap.png';
 import './map.css';
 

@@ -9,6 +9,7 @@
     "cra-template": "1.2.0",
     "estate_agent_website": "file:",
     "leaflet": "^1.9.4",
+    "lucide-react": "^0.469.0",
     "react": "^19.0.0",
     "react-bootstrap": "^2.10.7",
     "react-dom": "^19.0.0",

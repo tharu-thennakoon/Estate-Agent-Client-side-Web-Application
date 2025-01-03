@@ -4,7 +4,7 @@ import { useLocation } from 'react-router-dom';
 import PropertyCard from '../../components/propertyCard/PropertyCard';
 import SearchBar from '../../components/SearchBar/SearchBar';
 import Map from '../../components/map/Map';
-import propertiesData from '../../components/lib/properties.json';
+import propertiesData from '../../assets/properties.json';
 import './filterPage.css';
 
 const FilterPage = () => {

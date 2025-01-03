@@ -9,11 +9,11 @@
       "description": "Attractive three-bedroom semi-detached family home situated within 0.5 miles of Colombo city center with easy access to local shops, schools, and transport.",
       "location": "Borella, Colombo, Sri Lanka",
       "attached_bathroom": true,
-      "picture": "./assets/properties/prop1/main1.jpg",
+      "picture": "./properties/prop1/main1.jpg",
       "pictures": [
-        "./assets/properties/prop1/img1.jpg",
-        "./assets/properties/prop1/img2.jpg",
-        "./assets/properties/prop1/img3.jpg"
+        "./properties/prop1/img1.jpg",
+        "./properties/prop1/img2.jpg",
+        "./properties/prop1/img3.jpg"
       ],
       "locationparams": {
         "latitude": 6.9184,

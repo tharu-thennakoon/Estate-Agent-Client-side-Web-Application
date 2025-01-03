@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import PropertyCard from "../../components/propertyCard/PropertyCard";
 import "./properties.css";
-import propertiesData from "../../components/lib/properties.json";
+import propertiesData from "../../assets/properties.json";
 import FavoritesBar from "../../components/FavoritesBar/FavoritesBar";
 import Map from "../../components/map/Map";
 

@@ -1,20 +1,13 @@
-import React, { useState } from 'react';
 import PropertyCard from './PropertyCard';
-import properties from './properties.json'; // Assuming you saved the data in a JSON file.
 
 const PropertyList = () => {
-  const [favorites, setFavorites] = useState([]);
-
   const handleFavoriteToggle = (id, isFavorite) => {
-    if (isFavorite) {
-      setFavorites((prev) => [...prev, id]);
-    } else {
-      setFavorites((prev) => prev.filter((favoriteId) => favoriteId !== id));
-    }
+    // Your favorite handling logic
+    console.log(`Property ${id} is ${isFavorite ? 'favorited' : 'unfavorited'}`);
   };
 
   return (
-    <div className="property-list">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
       {properties.map((property) => (
         <PropertyCard
           key={property.id}
@@ -31,5 +24,3 @@ const PropertyList = () => {
     </div>
   );
 };
-
-export default PropertyList;

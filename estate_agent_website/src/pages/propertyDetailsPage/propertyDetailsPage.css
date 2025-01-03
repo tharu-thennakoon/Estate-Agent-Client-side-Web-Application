@@ -1,266 +1,142 @@
-/* propertyDetailsPage.css */
-
-/* Main Layout */
-.max-w-7xl {
-    max-width: 1440px;
-    margin: 0 auto;
+.property-details-page {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    max-width: 1200px;
+    margin: 0 auto; /* Center the content */
+    height: 100vh; /* Set the height to the viewport height */
+    overflow-y: auto; /* Enable vertical scrolling */
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: #ccc transparent; /* Colors for Firefox */
   }
   
-  /* Header Section */
-  .property-header {
-    margin-bottom: 1.5rem;
+  .property-details-page::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
   }
   
-  .property-title {
-    font-size: 2rem;
-    font-weight: 600;
-    color: #1a1a1a;
-    margin-bottom: 0.5rem;
+  .property-details-page::-webkit-scrollbar-thumb {
+    background: #ccc; /* Color of the scrollbar thumb */
+    border-radius: 4px; /* Rounded scrollbar thumb */
   }
   
-  .property-location {
-    color: #666;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+  .property-details-page::-webkit-scrollbar-track {
+    background: #f5f5f5; /* Background color of the scrollbar track */
   }
   
-  .price-tag {
-    display: inline-block;
-    background-color: #fef3c7;
-    padding: 0.25rem 0.75rem;
-    border-radius: 0.375rem;
-    font-weight: 600;
-    color: #92400e;
+  h1 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
   }
   
-  /* Image Gallery */
-  .main-image-container {
-    position: relative;
-    border-radius: 0.5rem;
-    overflow: hidden;
-    margin-bottom: 0.5rem;
+  p {
+    font-size: 1rem;
+    margin-bottom: 10px;
   }
   
   .main-image {
     width: 100%;
-    height: 500px;
+    max-height: 400px;
     object-fit: cover;
+    margin-bottom: 20px;
+    border-radius: 10px; /* Rounded corners */
   }
   
-  .thumbnail-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.5rem;
+  .gallery {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    padding-bottom: 10px;
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: #ccc transparent; /* Colors for Firefox */
   }
   
-  .thumbnail-image {
+  .gallery::-webkit-scrollbar {
+    height: 8px; /* Height of the horizontal scrollbar */
+  }
+  
+  .gallery::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+  }
+  
+  .gallery img {
+    height: 150px;
+    object-fit: cover;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    flex-shrink: 0; /* Prevent images from shrinking */
+  }
+  
+  .floorplan-image {
     width: 100%;
-    height: 128px;
-    object-fit: cover;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    transition: opacity 0.2s;
+    max-height: 300px;
+    object-fit: contain;
+    margin-top: 20px;
+    border-radius: 10px;
   }
   
-  .thumbnail-image:hover {
-    opacity: 0.9;
-  }
-  
-  /* Info Cards */
-  .info-card {
-    background-color: #fdf2f8;  /* Light pink background */
-    border-radius: 0.5rem;
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-  }
-  
-  .info-card-title {
-    font-size: 1.25rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    color: #1a1a1a;
-  }
-  
-  /* Feature Items */
-  .feature-item {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    margin-bottom: 1rem;
-  }
-  
-  .feature-icon-container {
-    width: 2rem;
-    height: 2rem;
-    background-color: #e5e7eb;
-    border-radius: 9999px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .feature-icon {
-    width: 1.25rem;
-    height: 1.25rem;
-  }
-  
-  .feature-content h3 {
-    font-weight: 600;
-    font-size: 0.875rem;
-    margin-bottom: 0.25rem;
-  }
-  
-  .feature-content p {
-    font-size: 0.875rem;
-    color: #666;
-  }
-  
-  /* Stats Grid */
-  .stats-grid {
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-  }
-  
-  .stat-item {
-    text-align: center;
-  }
-  
-  .stat-value {
-    font-weight: 700;
-    margin-bottom: 0.25rem;
-  }
-  
-  .stat-label {
-    font-size: 0.875rem;
-    color: #666;
-  }
-  
-  /* Map Container */
   .map-container {
-    height: 16rem;
-    border-radius: 0.5rem;
-    overflow: hidden;
+    margin-top: 20px;
+    height: 400px;
+    border-radius: 10px;
+    overflow: hidden; /* Ensures no extra scrollbars for map */
   }
   
-  .leaflet-container {
-    height: 100%;
-    width: 100%;
-    border-radius: 0.5rem;
-  }
-  
-  /* Action Buttons */
-  .action-buttons {
-    display: flex;
-    gap: 1rem;
-    margin-top: 1.5rem;
-  }
-  
-  .action-button {
-    flex: 1;
-    padding: 0.75rem;
-    background-color: #e5e7eb;
-    color: #1f2937;
-    border: none;
-    border-radius: 0.5rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background-color 0.2s;
+  .error-message {
+    color: red;
+    font-weight: bold;
     text-align: center;
+    font-size: 1.2rem;
   }
   
-  .action-button:hover {
-    background-color: #d1d5db;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 1024px) {
-    .main-image {
-      height: 400px;
+  @media screen and (max-width: 768px) {
+    h1 {
+      font-size: 1.5rem;
     }
-    
-    .thumbnail-image {
-      height: 96px;
-    }
-  }
   
-  @media (max-width: 768px) {
+    p {
+      font-size: 0.9rem;
+    }
+  
     .main-image {
+      max-height: 300px;
+    }
+  
+    .gallery img {
+      height: 120px;
+    }
+  
+    .floorplan-image {
+      max-height: 200px;
+    }
+  
+    .map-container {
       height: 300px;
     }
-    
-    .thumbnail-image {
-      height: 80px;
+  }
+  
+  @media screen and (max-width: 480px) {
+    h1 {
+      font-size: 1.2rem;
     }
-    
-    .stats-grid {
-      flex-direction: column;
-      gap: 1rem;
+  
+    p {
+      font-size: 0.8rem;
     }
-    
-    .action-buttons {
-      flex-direction: column;
+  
+    .main-image {
+      max-height: 250px;
     }
-    
-    .info-card {
-      padding: 1rem;
+  
+    .gallery img {
+      height: 100px;
+    }
+  
+    .floorplan-image {
+      max-height: 150px;
+    }
+  
+    .map-container {
+      height: 250px;
     }
   }
   
-  /* Image Float Icons */
-  .float-icons {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    display: flex;
-    gap: 0.5rem;
-  }
-  
-  .float-icon {
-    width: 2.5rem;
-    height: 2.5rem;
-    background-color: white;
-    border-radius: 9999px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: background-color 0.2s;
-  }
-  
-  .float-icon:hover {
-    background-color: #f3f4f6;
-  }
-  
-  /* Smooth Scrolling */
-  html {
-    scroll-behavior: smooth;
-  }
-  
-  /* Focus States */
-  button:focus {
-    outline: 2px solid #3b82f6;
-    outline-offset: 2px;
-  }
-  
-  /* User Profile */
-  .user-profile {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 1rem;
-    background-color: #fef3c7;
-    border-radius: 0.5rem;
-  }
-  
-  .profile-image {
-    width: 3rem;
-    height: 3rem;
-    border-radius: 9999px;
-  }
-  
-  .profile-name {
-    font-weight: 600;
-    color: #1a1a1a;
-  }
