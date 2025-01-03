@@ -4,19 +4,19 @@ import "./favoritesBar.css";
 const FavoritesBar = ({ favorites, onDrop, onRemove, onClearAll }) => {
   const handleDrop = (event) => {
     event.preventDefault();
-    const propertyId = event.dataTransfer.getData("text/plain");
-    onDrop(propertyId);
+    const propertyId = event.dataTransfer.getData("text/plain"); // Retrieve the ID from the drag data
+    onDrop(propertyId); // Call onDrop with the ID
   };
 
   const handleDragOver = (event) => {
-    event.preventDefault();
+    event.preventDefault(); // Allow the drop by preventing the default behavior
   };
 
   return (
     <div
       className="favorites-bar"
-      onDrop={handleDrop}
-      onDragOver={handleDragOver}
+      onDrop={handleDrop} // Drop handler
+      onDragOver={handleDragOver} // Allow drag over
     >
       <h3>Favorites</h3>
       {favorites.length === 0 ? (

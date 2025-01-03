@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const PropertyCard = ({ 
   id,
@@ -8,7 +8,8 @@ const PropertyCard = ({
   bathrooms = 0,
   address,
   title,
-  onFavoriteToggle 
+  onFavoriteToggle,
+  onDragStart
 }) => {
   const [imageError, setImageError] = useState(false);
   const [isFavorite, setIsFavorite] = useState(false);
@@ -23,8 +24,17 @@ const PropertyCard = ({
     onFavoriteToggle(id, newFavoriteStatus);
   };
 
+  const handleDragStart = (event) => {
+    event.dataTransfer.setData("text/plain", id); // Store the property ID in the dataTransfer object
+    onDragStart(id); // Optional: Callback for any additional drag logic
+  };
+
   return (
-    <div className="relative flex flex-col bg-white rounded-lg shadow-md overflow-hidden w-full max-w-sm">
+    <div
+      className="relative flex flex-col bg-white rounded-lg shadow-md overflow-hidden w-full max-w-sm"
+      draggable
+      onDragStart={handleDragStart} // Allow drag
+    >
       <div className="relative h-48 w-full bg-gray-200">
         {imageError ? (
           <div className="flex items-center justify-center h-full w-full bg-gray-100">

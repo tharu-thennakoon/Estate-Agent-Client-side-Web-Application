@@ -8,23 +8,21 @@ import Map from "../../components/map/Map";
 const Properties = () => {
   const [favorites, setFavorites] = useState([]);
 
-  const handleFavorite = (propertyId) => {
-    const property = propertiesData.properties.find(
-      (p) => p.id === propertyId
-    );
-    setFavorites((prevFavorites) =>
-      prevFavorites.some((fav) => fav.id === propertyId)
-        ? prevFavorites.filter((fav) => fav.id !== propertyId)
-        : [...prevFavorites, property]
-    );
+  const handleFavorite = (propertyId, isFavorite) => {
+    const property = propertiesData.properties.find(p => p.id === propertyId);
+    setFavorites((prevFavorites) => {
+      if (isFavorite) {
+        return [...prevFavorites, property];
+      } else {
+        return prevFavorites.filter(fav => fav.id !== propertyId);
+      }
+    });
   };
 
   const handleDrop = (propertyId) => {
-    const property = propertiesData.properties.find(
-      (p) => p.id === propertyId
-    );
-    if (property && !favorites.some((fav) => fav.id === propertyId)) {
-      setFavorites((prevFavorites) => [...prevFavorites, property]);
+    const property = propertiesData.properties.find(p => p.id === propertyId);
+    if (property && !favorites.some(fav => fav.id === propertyId)) {
+      setFavorites(prevFavorites => [...prevFavorites, property]);
     }
   };
 
@@ -53,6 +51,7 @@ const Properties = () => {
             address={property.location}
             title={`${property.type} - ${property.location}`}
             onFavoriteToggle={handleFavorite}
+            onDragStart={handleFavorite} // Optional drag logic
           />
         ))}
       </div>
