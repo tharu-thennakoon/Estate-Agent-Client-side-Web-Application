@@ -1,7 +1,7 @@
 .contact-page {
   padding: 40px;
   background-color: #f9f9f9;
-  overflow: auto; /* Enables scrolling when content overflows */
+  overflow: auto;
 }
 
 .contact-content {
@@ -9,20 +9,24 @@
   margin: 0 auto;
   text-align: center;
   background: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  overflow-y: auto; /* Scrolls if content exceeds the container height */
+  padding: 25px;
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
 }
 
 h1 {
   font-size: 2.5rem;
   margin-bottom: 20px;
+  font-family: 'Pacifico', cursive; /* Cute font for headings */
+  color: #0c0c0c; /* Green color for heading */
 }
 
 p {
   font-size: 1.2rem;
   margin-bottom: 30px;
+  font-family: 'Poppins', sans-serif;
+  color: #857c7c;
 }
 
 .contact-form {
@@ -38,15 +42,20 @@ p {
 label {
   font-size: 1rem;
   font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  color: #0c0c0c;
 }
 
 input, textarea {
   width: 100%;
-  padding: 10px;
-  margin-top: 5px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
+  padding: 12px;
+  margin-top: 8px;
+  border-radius: 10px; /* Rounded corners for inputs */
+  border: 1px solid #76e7cf; /* Green border */
   font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffffff; /* Light green background for inputs */
+  color: #333;
 }
 
 textarea {
@@ -55,18 +64,19 @@ textarea {
 }
 
 button {
-  background-color: #007bff;
+  background-color: #55c9a2; /* Green button */
   color: white;
-  padding: 12px;
+  padding: 14px 20px;
   border: none;
-  border-radius: 5px;
+  border-radius: 12px; /* Rounded corners for button */
   cursor: pointer;
   font-size: 16px;
+  font-family: 'Poppins', sans-serif;
   transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #22966a; /* Darker green on hover */
 }
 
 .contact-info {
@@ -76,12 +86,14 @@ button:hover {
 
 h2 {
   font-size: 1.8rem;
+  font-family: 'Poppins', sans-serif;
+  color: #28a745; /* Green color for subheading */
 }
 
 /* Make the contact page scrollable if content overflows */
 .contact-page {
-  max-height: 100vh; /* Set maximum height for the contact page */
-  overflow-y: auto; /* Enable vertical scrolling */
+  max-height: 100vh;
+  overflow-y: auto;
 }
 
 /* Responsive Design */
@@ -100,7 +112,7 @@ h2 {
 
   button {
     font-size: 14px;
-    padding: 10px;
+    padding: 12px;
   }
 
   .contact-info {

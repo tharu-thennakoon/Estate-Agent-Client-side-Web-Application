@@ -1,10 +1,10 @@
-// FavoritesBar.js
-import React from 'react';
+import React from "react";
+import "./favoritesBar.css";
 
-const FavoritesBar = ({ favorites, onDrop }) => {
+const FavoritesBar = ({ favorites, onDrop, onRemove, onClearAll }) => {
   const handleDrop = (event) => {
     event.preventDefault();
-    const propertyId = event.dataTransfer.getData('text/plain');
+    const propertyId = event.dataTransfer.getData("text/plain");
     onDrop(propertyId);
   };
 
@@ -14,22 +14,31 @@ const FavoritesBar = ({ favorites, onDrop }) => {
 
   return (
     <div
-      className="favoritesBar"
+      className="favorites-bar"
       onDrop={handleDrop}
       onDragOver={handleDragOver}
     >
-      <h2>Favorites</h2>
-      <div className="favoriteProperties">
-        {favorites.length === 0 ? (
-          <p>No favorites yet!</p>
-        ) : (
-          favorites.map((favorite) => (
-            <div key={favorite.id} className="favoriteItem">
-              <p>{`${favorite.type} - ${favorite.location}`}</p>
+      <h3>Favorites</h3>
+      {favorites.length === 0 ? (
+        <p>No favorites yet!</p>
+      ) : (
+        <div>
+          {favorites.map((favorite) => (
+            <div className="favorite-item" key={favorite.id}>
+              {`${favorite.type} - ${favorite.location}`}
+              <button
+                className="remove-btn"
+                onClick={() => onRemove(favorite.id)}
+              >
+                Remove
+              </button>
             </div>
-          ))
-        )}
-      </div>
+          ))}
+          <button className="clear-all-btn" onClick={onClearAll}>
+            Clear All
+          </button>
+        </div>
+      )}
     </div>
   );
 };

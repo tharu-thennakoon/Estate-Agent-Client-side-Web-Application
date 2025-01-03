@@ -1,3 +1,4 @@
+// src/pages/propertiesPage/FilterPage.jsx
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import PropertyCard from '../../components/propertyCard/PropertyCard';
@@ -12,7 +13,7 @@ const FilterPage = () => {
 
   useEffect(() => {
     const query = location.state?.query || {};
-    filterProperties(query); // Filter with basic criteria
+    filterProperties(query);
   }, [location.state]);
 
   const filterProperties = (query) => {
@@ -21,7 +22,6 @@ const FilterPage = () => {
       const matchesLocation = query.location
         ? property.location.toLowerCase().includes(query.location.toLowerCase())
         : true;
-
       return matchesTenure && matchesLocation;
     });
 
@@ -34,13 +34,13 @@ const FilterPage = () => {
       const matchesLocation = query.location
         ? property.location.toLowerCase().includes(query.location.toLowerCase())
         : true;
-      const matchesMinPrice = query.minPrice ? property.price >= query.minPrice : true;
-      const matchesMaxPrice = query.maxPrice ? property.price <= query.maxPrice : true;
+      const matchesMinPrice = query.minPrice ? property.price >= parseInt(query.minPrice) : true;
+      const matchesMaxPrice = query.maxPrice ? property.price <= parseInt(query.maxPrice) : true;
       const matchesMinBedrooms = query.minBedrooms
-        ? property.bedrooms >= query.minBedrooms
+        ? property.bedrooms >= parseInt(query.minBedrooms)
         : true;
       const matchesMaxBedrooms = query.maxBedrooms
-        ? property.bedrooms <= query.maxBedrooms
+        ? property.bedrooms <= parseInt(query.maxBedrooms)
         : true;
 
       return (
@@ -75,7 +75,7 @@ const FilterPage = () => {
         ))}
       </div>
       <div className="mapSection">
-        <Map />
+        <Map properties={filteredProperties} />
       </div>
     </div>
   );

@@ -1,26 +1,41 @@
-import React, { useState } from 'react';
-import PropertyCard from '../../components/propertyCard/PropertyCard';
-import './properties.css';
-import propertiesData from '../../components/lib/properties.json';
-import FavoritesBar from '../../components/FavoritesBar/FavoritesBar'; // Importing the FavoritesBar component
-import Map from '../../components/map/Map';
-
+import React, { useState } from "react";
+import PropertyCard from "../../components/propertyCard/PropertyCard";
+import "./properties.css";
+import propertiesData from "../../components/lib/properties.json";
+import FavoritesBar from "../../components/FavoritesBar/FavoritesBar";
+import Map from "../../components/map/Map";
 
 const Properties = () => {
   const [favorites, setFavorites] = useState([]);
 
   const handleFavorite = (propertyId) => {
+    const property = propertiesData.properties.find(
+      (p) => p.id === propertyId
+    );
     setFavorites((prevFavorites) =>
-      prevFavorites.includes(propertyId)
-        ? prevFavorites.filter((id) => id !== propertyId)
-        : [...prevFavorites, propertyId]
+      prevFavorites.some((fav) => fav.id === propertyId)
+        ? prevFavorites.filter((fav) => fav.id !== propertyId)
+        : [...prevFavorites, property]
     );
   };
 
   const handleDrop = (propertyId) => {
-    if (!favorites.includes(propertyId)) {
-      setFavorites((prevFavorites) => [...prevFavorites, propertyId]);
+    const property = propertiesData.properties.find(
+      (p) => p.id === propertyId
+    );
+    if (property && !favorites.some((fav) => fav.id === propertyId)) {
+      setFavorites((prevFavorites) => [...prevFavorites, property]);
     }
+  };
+
+  const handleRemove = (propertyId) => {
+    setFavorites((prevFavorites) =>
+      prevFavorites.filter((fav) => fav.id !== propertyId)
+    );
+  };
+
+  const handleClearAll = () => {
+    setFavorites([]);
   };
 
   return (
@@ -37,16 +52,19 @@ const Properties = () => {
             bathrooms={property.bathrooms}
             address={property.location}
             title={`${property.type} - ${property.location}`}
-            onFavouriteToggle={handleFavorite}
-            draggable
-            onDragStart={(e) => e.dataTransfer.setData('text/plain', property.id)}
+            onFavoriteToggle={handleFavorite}
           />
         ))}
       </div>
       <div className="mapSection">
         <Map />
       </div>
-      <FavoritesBar favorites={favorites} onDrop={handleDrop} />
+      <FavoritesBar
+        favorites={favorites}
+        onDrop={handleDrop}
+        onRemove={handleRemove}
+        onClearAll={handleClearAll}
+      />
     </div>
   );
 };

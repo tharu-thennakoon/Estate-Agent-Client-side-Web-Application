@@ -1,52 +1,75 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import { useNavigate } from 'react-router-dom';  // Import the useNavigate hook
 import './property.css';
 
-const PropertyCard = ({ id, image, price, bedrooms, bathrooms, address, title, onFavouriteToggle }) => {
-  const [isFavourite, setIsFavourite] = useState(false);
-  const navigate = useNavigate();
+const PropertyCard = ({
+  id,
+  image, // This image is passed as a prop
+  price,
+  bedrooms = 0,
+  bathrooms = 0,
+  address,
+  title,
+  onFavoriteToggle,
+}) => {
+  const [isFavorite, setIsFavorite] = useState(false);
+  const navigate = useNavigate();  // Initialize navigate
 
-  const formatPrice = new Intl.NumberFormat('en-LK', {
-    style: 'currency',
-    currency: 'LKR',
-    minimumFractionDigits: 0,
-  });
-
-  // Handle Favourite button click
-  const handleFavouriteClick = () => {
-    const newFavouriteStatus = !isFavourite;
-    setIsFavourite(newFavouriteStatus);
-    onFavouriteToggle(id, newFavouriteStatus); // Pass the updated state to parent
+  const handleFavoriteClick = () => {
+    const newFavoriteStatus = !isFavorite;
+    setIsFavorite(newFavoriteStatus);
+    onFavoriteToggle(id, newFavoriteStatus);
   };
 
-  // Handle drag start event for drag and drop
   const handleDragStart = (event) => {
     event.dataTransfer.setData('text/plain', id);
   };
 
-  // Handle View Details button click (navigates to property details page)
   const handleViewDetailsClick = () => {
-    navigate(`/property/${id}`); // Navigate to the property details page
+    if (id) navigate(`/property/${id}`);  // Use navigate to go to the details page
   };
 
   return (
-    <div className="property-card" draggable onDragStart={handleDragStart}>
-      <img src={image} alt="Property" className="property-image" />
+    <div
+      className="property-card"
+      draggable
+      onDragStart={handleDragStart}
+      aria-grabbed={isFavorite}
+    >
+      {/* Ensure the image source is valid */}
+      <img src={image} alt={title} className="property-image" />
       <div className="property-info">
-        <h3>{title}</h3>
+        <h4>{title}</h4>
         <p>{address}</p>
-        <div className="property-details">
-          <span>{formatPrice.format(price)}</span>
-          <span>{bedrooms} bedroom{bedrooms > 1 ? 's' : ''}</span>
-          <span>{bathrooms || 0} bathroom{bathrooms > 1 ? 's' : ''}</span>
-        </div>
-        <button onClick={handleViewDetailsClick}>View Details</button> {/* View Details button */}
-        <button className="favourite-button" onClick={handleFavouriteClick}>
-          {isFavourite ? 'Remove from Favourites' : 'Add to Favourites'}
+        <p>
+          {price.toLocaleString()} LKR - {bedrooms} bedroom
+          {bedrooms !== 1 ? 's' : ''}, {bathrooms} bathroom
+          {bathrooms !== 1 ? 's' : ''}
+        </p>
+        <button onClick={handleViewDetailsClick} className="view-details-btn">
+          View Details
+        </button>
+        <button
+          onClick={handleFavoriteClick}
+          className={`favorite-btn ${isFavorite ? 'active' : ''}`}
+        >
+          {isFavorite ? 'Remove from Favorites' : 'Add to Favorites'}
         </button>
       </div>
     </div>
   );
+};
+
+PropertyCard.propTypes = {
+  id: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
+  bedrooms: PropTypes.number,
+  bathrooms: PropTypes.number,
+  address: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  onFavoriteToggle: PropTypes.func.isRequired,
 };
 
 export default PropertyCard;

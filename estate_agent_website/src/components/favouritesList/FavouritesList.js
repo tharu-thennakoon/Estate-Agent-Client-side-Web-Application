@@ -1,4 +1,5 @@
 import React from 'react';
+import './FavouritesList.css'; // Import the CSS file here
 import properties from './lib/properties.json'; // Adjust the path if necessary
 
 function FavouritesList() {

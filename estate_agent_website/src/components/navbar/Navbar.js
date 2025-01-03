@@ -19,18 +19,18 @@ function Navbar() {
       </div>
 
       <div className="right">
-        <a href="/">Sign in</a>
-        <a href="/" className="register">Sign up</a>
-        <div className="menuIcon">
-          <img src={menuIcon} alt="menu" onClick={() => setOpen((prev) => !prev)} />
+        <a href="/signin">Sign in</a>
+        <a href="/signup" className="register">Sign up</a>
+        <div className="menuIcon" onClick={() => setOpen((prev) => !prev)}>
+          <img src={menuIcon} alt="menu" />
         </div>
         <div className={open ? 'menu active' : 'menu'}>
           <a href="/">Home</a>
           <a href="/properties">Properties</a>
           <a href="/about">About</a>
           <a href="/contact">Contact</a>
-          <a href="/">Sign in</a>
-          <a href="/">Sign up</a>
+          <a href="/signin">Sign in</a>
+          <a href="/signup" className="register">Sign up</a>
         </div>
       </div>
     </nav>

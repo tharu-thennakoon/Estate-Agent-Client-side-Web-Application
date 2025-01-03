@@ -11,14 +11,14 @@ nav a {
     font-size: 16px; /* Adjust the font size */
     font-weight: 600; /* Change the weight (boldness) */
     text-transform: uppercase; /* Make the text uppercase */
-    color: #333; /* Change the text color */
+    color: #0c0c0c; /* Change the text color */
     text-decoration: none; /* Remove the underline */
     transition: all 0.4s ease;
 }
 
 nav a:hover {
     transform: scale(1.05);
-    color: #fece51; /* Change the hover color */
+    color: #0a0a0a; /* Change the hover color */
 }
 
 /* Left Section */

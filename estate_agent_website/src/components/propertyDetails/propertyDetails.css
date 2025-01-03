@@ -1,0 +1,104 @@
+/* Container styling */
+.property-details {
+    width: 80%;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff; /* White background */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    color: #333; /* Dark text color */
+  }
+  
+  /* Title styling */
+  .property-details h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #1f3c6d; /* Dark blue */
+    border-bottom: 3px solid #1f3c6d; /* Blue underline for the title */
+    padding-bottom: 5px;
+  }
+  
+  /* General text styling */
+  .property-details p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #555; /* Slightly gray text */
+  }
+  
+  /* Section titles (Gallery, Floorplan) */
+  .property-details h3 {
+    font-size: 1.25rem;
+    margin-top: 20px;
+    color: #2d6a4f; /* Green */
+    padding-bottom: 8px;
+    border-bottom: 2px solid #2d6a4f; /* Green underline for sections */
+  }
+  
+  /* Close button styling */
+  .property-details .close-btn {
+    background-color: #2d6a4f; /* Green */
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  
+  .property-details .close-btn:hover {
+    background-color: #1b4f30; /* Dark green */
+  }
+  
+  /* Main image styling */
+  .property-details img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 4px solid #1f3c6d; /* Blue border around the main image */
+    margin-bottom: 20px;
+  }
+  
+  /* Styling for the information boxes (details, gallery, floorplan) */
+  .property-details .info-box {
+    background-color: #f5f5f5;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    border: 2px solid #e1e1e1;
+  }
+  
+  /* Gallery section styling */
+  .property-details .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  .property-details .gallery img {
+    width: 32%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 2px solid #2d6a4f; /* Green border for gallery images */
+  }
+  
+  /* Hover effect for gallery images */
+  .property-details .gallery img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+  }
+  
+  /* Floorplan styling */
+  .property-details .floorplan {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 8px;
+    border: 4px solid #2d6a4f; /* Green border for floorplan */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  

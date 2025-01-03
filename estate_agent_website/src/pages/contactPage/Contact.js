@@ -64,9 +64,9 @@ const Contact = () => {
 
         <div className="contact-info">
           <h2>Contact Information:</h2>
-          <p>Email: support@example.com</p>
+          <p>Email: tharushikalpani2003@gmail.com</p>
           <p>Phone: +1-234-567-890</p>
-          <p>Address: Placeholder address</p>
+          
         </div>
       </div>
 

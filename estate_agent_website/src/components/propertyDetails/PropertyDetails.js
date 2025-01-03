@@ -1,4 +1,5 @@
 import React from 'react';
+import './propertyDetails.css';  // Import the CSS file here
 
 const PropertyDetails = ({ property, onClose }) => {
   return (
