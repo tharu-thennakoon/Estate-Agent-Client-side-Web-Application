@@ -66,7 +66,6 @@ const Contact = () => {
           <h2>Contact Information:</h2>
           <p>Email: tharushikalpani2003@gmail.com</p>
           <p>Phone: +1-234-567-890</p>
-          
         </div>
       </div>
 

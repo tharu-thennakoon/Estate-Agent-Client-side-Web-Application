@@ -7,15 +7,20 @@ const AboutPage = () => {
       <div className="about-content">
         <h1>About Us</h1>
         <p>
-          Our mission is to simplify your property search by offering a user-friendly platform to explore and save properties that match your preferences. We aim to provide a seamless experience for users searching for properties by combining advanced search functionality, a favourites management system, and a responsive design for all devices.
+          Welcome to our platform, your trusted companion in finding the perfect property. We are dedicated to transforming the way you explore, discover, and manage properties, making your journey seamless and efficient. With innovation at our core, we strive to connect you with your dream home effortlessly.
         </p>
 
-        <h2>Features:</h2>
+        <h2>What We Offer:</h2>
         <ul>
-          <li><strong>Advanced Search:</strong> Effortlessly filter properties based on your specific criteria, including property type, price range, location, and more.</li>
-          <li><strong>Favourites Management:</strong> Save your favourite properties and revisit them anytime. You can easily manage and track your preferred listings in one place.</li>
-          <li><strong>Responsive Design:</strong> Our platform is fully responsive, providing an optimal browsing experience across all devices, including desktops, tablets, and mobile phones.</li>
+          <li><strong>Comprehensive Property Listings:</strong> Discover a wide range of properties tailored to suit every need, from cozy apartments to luxurious homes.</li>
+          <li><strong>Personalized Experience:</strong> Customize your search with advanced filters and save your favorite properties to revisit them anytime.</li>
+          <li><strong>Cross-Platform Accessibility:</strong> Enjoy a consistent experience across all your devices, whether you’re browsing on a computer, tablet, or smartphone.</li>
+          <li><strong>Reliable Support:</strong> Our team is here to assist you at every step, ensuring that your property search is smooth and successful.</li>
         </ul>
+
+        <p>
+          Join us as we redefine the property search experience. Whether you're buying, renting, or just exploring, we’re here to help you every step of the way.
+        </p>
       </div>
     </div>
   );

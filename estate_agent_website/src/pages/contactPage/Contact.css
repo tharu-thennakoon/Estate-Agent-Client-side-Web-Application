@@ -1,7 +1,11 @@
 .contact-page {
   padding: 40px;
-  background-color: #f9f9f9;
+  background-image: url('../../assets/contact.jpg'); /* Replace with your image URL */
+  background-size: cover; /* Ensures the image covers the entire background */
+  background-position: center; /* Centers the image */
+  background-attachment: fixed; /* Makes the background image fixed during scrolling */
   overflow: auto;
+  position: relative; /* Ensure this is set for overlay to work */
 }
 
 .contact-content {
@@ -147,4 +151,16 @@ h2 {
   .form-group textarea {
     font-size: 0.85rem;
   }
+}
+
+/* Optional Overlay */
+.contact-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+  z-index: -1;
 }
