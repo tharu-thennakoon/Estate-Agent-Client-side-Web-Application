@@ -30,18 +30,6 @@ Estate Explorer is a sleek and modern real estate platform designed to help user
 
 ---
 
-## Screenshots 📸
-
-### Home Page
-![Home Page Screenshot](https://via.placeholder.com/800x400)
-
-### Property Details
-![Property Details Screenshot](https://via.placeholder.com/800x400)
-
-### Contact Page
-![Contact Page Screenshot](https://via.placeholder.com/800x400)
-
----
 
 ## Installation 🚀
 
