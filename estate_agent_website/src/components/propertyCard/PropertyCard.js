@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const PropertyCard = ({ 
+const PropertyCard = ({
   id,
   image,
   price,
@@ -9,7 +9,7 @@ const PropertyCard = ({
   address,
   title,
   onFavoriteToggle,
-  onDragStart
+  onDragStart,
 }) => {
   const [imageError, setImageError] = useState(false);
   const [isFavorite, setIsFavorite] = useState(false);
@@ -43,14 +43,14 @@ const PropertyCard = ({
           </div>
         ) : (
           <img
-            src={image.startsWith('/') ? image : `/${image}`}
+            src={image.startsWith("/") ? image : `/${image}`} // Proper image URL handling
             alt={title}
             onError={handleImageError}
             className="h-full w-full object-cover"
           />
         )}
       </div>
-      
+
       <div className="p-4">
         <h3 className="text-lg font-semibold mb-2 truncate">{title}</h3>
         <p className="text-gray-600 mb-2 truncate">{address}</p>
@@ -58,13 +58,17 @@ const PropertyCard = ({
           {price.toLocaleString()} LKR
         </p>
         <div className="flex items-center gap-4 text-sm text-gray-600">
-          <span>🛏️ {bedrooms} Bed{bedrooms !== 1 ? 's' : ''}</span>
-          <span>🚿 {bathrooms} Bath{bathrooms !== 1 ? 's' : ''}</span>
+          <span>
+            🛏️ {bedrooms} Bed{bedrooms !== 1 ? "s" : ""}
+          </span>
+          <span>
+            🚿 {bathrooms} Bath{bathrooms !== 1 ? "s" : ""}
+          </span>
         </div>
-        
+
         <div className="mt-4 flex gap-2">
-          <button 
-            onClick={() => window.location.href = `/property/${id}`}
+          <button
+            onClick={() => (window.location.href = `/property/${id}`)}
             className="flex-1 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors"
           >
             View Details
@@ -72,12 +76,12 @@ const PropertyCard = ({
           <button
             onClick={handleFavoriteClick}
             className={`px-4 py-2 rounded border transition-colors ${
-              isFavorite 
-                ? 'bg-red-100 text-red-600 border-red-200 hover:bg-red-200' 
-                : 'bg-gray-50 text-gray-600 border-gray-200 hover:bg-gray-100'
+              isFavorite
+                ? "bg-red-100 text-red-600 border-red-200 hover:bg-red-200"
+                : "bg-gray-50 text-gray-600 border-gray-200 hover:bg-gray-100"
             }`}
           >
-            {isFavorite ? '❤️' : '🤍'}
+            {isFavorite ? "❤️" : "🤍"}
           </button>
         </div>
       </div>
