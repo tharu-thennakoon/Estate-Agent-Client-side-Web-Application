@@ -13,6 +13,11 @@
   /* Logo styles */
   .nav-logo .logo {
     width: 150px; /* Adjust the size of the logo */
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
   }
   
   /* Style for the nav links */

@@ -1,0 +1,75 @@
+/* About Section Styles */
+.about {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+    background-size: cover; /* Ensure the image covers the entire section */
+    background-position: center center; /* Center the image */
+    background-repeat: no-repeat; /* Don't repeat the image */
+    border-radius: 8px;
+    color: #fff; /* Ensure the text is readable on top of the image */
+    position: relative; /* Required for overlay positioning */
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.5); /* Darker shadow effect */
+  }
+  
+  /* About Section Header */
+  .about h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff; /* White color for header */
+  }
+  
+  /* About Section Paragraphs */
+  .about p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #fff; /* White color for paragraphs */
+    margin-bottom: 20px;
+  }
+  
+  /* About Section Subheading */
+  .about h2 {
+    font-size: 2rem;
+    color: #fff; /* White color for subheadings */
+    margin-bottom: 15px;
+  }
+  
+  /* About Section List */
+  .about ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  /* About Section List Items */
+  .about li {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #fff; /* White color for list items */
+    transition: color 0.3s ease; /* Smooth color transition for hover effect */
+  }
+  
+  .about li strong {
+    font-weight: bold;
+  }
+  
+  /* Hover Effect on List Items */
+  .about li:hover {
+    color: #f0f0f0; /* Lighter color on hover */
+    cursor: pointer; /* Pointer cursor for interactivity */
+  }
+  
+  /* Dark Overlay Effect for Readability */
+  .about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Darker semi-transparent black overlay */
+    border-radius: 8px;
+    z-index: -1; /* Ensure overlay stays behind content */
+  }
+  

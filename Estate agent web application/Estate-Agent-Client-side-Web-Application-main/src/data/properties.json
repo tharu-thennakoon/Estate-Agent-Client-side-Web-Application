@@ -4,7 +4,7 @@
       "id": "prop1",
       "type": "House",
       "bedrooms": 3,
-      "price": 44400000000,  
+      "price": 44400000000,
       "tenure": "Freehold",
       "description": "Attractive three bedroom semi-detached family home situated within 0.5 miles of Petts Wood station with fast trains to London and within easy walking distance of local shops, schools, bus routes and National Trust woodland. The property comprises; two receptions, fitted 18'9 x 10'1 kitchen/breakfast room and conservatory...",
       "location": "Colombo, Sri Lanka",
@@ -38,7 +38,7 @@
       "id": "prop2",
       "type": "Flat",
       "bedrooms": 2,
-      "price": 23679760000,  
+      "price": 23679760000,
       "tenure": "Freehold",
       "description": "Presented in excellent decorative order throughout is this two double bedroom, two bathroom, garden flat...",
       "location": "Colombo, Sri Lanka",
@@ -72,7 +72,7 @@
       "id": "prop3",
       "type": "House",
       "bedrooms": 4,
-      "price": 54760000000,  
+      "price": 54760000000,
       "tenure": "Freehold",
       "description": "Stunning four bedroom detached house with modern amenities...",
       "location": "Colombo, Sri Lanka",
@@ -106,7 +106,7 @@
       "id": "prop4",
       "type": "Flat",
       "bedrooms": 1,
-      "price": 16280000000,  
+      "price": 16280000000,
       "tenure": "Leasehold",
       "description": "Modern one bedroom apartment in the heart of the city...",
       "location": "Colombo, Sri Lanka",
@@ -124,8 +124,6 @@
         "kitchenThumb": "/images/properties/prop4/kitchen-thumb.jpg",
         "bedroom1": "/images/properties/prop4/bedroom1.jpg",
         "bedroom1Thumb": "/images/properties/prop4/bedroom1-thumb.jpg",
-        "bedroom2": "/images/properties/prop4/bedroom2.jpg",
-        "bedroom2Thumb": "/images/properties/prop4/bedroom2-thumb.jpg",
         "bathroom": "/images/properties/prop4/bathroom.jpg",
         "bathroomThumb": "/images/properties/prop4/bathroom-thumb.jpg",
         "floorplan": "/images/properties/prop4/floorplan.jpg"
@@ -140,7 +138,7 @@
       "id": "prop5",
       "type": "House",
       "bedrooms": 5,
-      "price": 73920000000,  
+      "price": 73920000000,
       "tenure": "Freehold",
       "description": "Luxurious five bedroom detached house with extensive gardens...",
       "location": "Colombo, Sri Lanka",
@@ -158,8 +156,6 @@
         "kitchenThumb": "/images/properties/prop5/kitchen-thumb.jpg",
         "bedroom1": "/images/properties/prop5/bedroom1.jpg",
         "bedroom1Thumb": "/images/properties/prop5/bedroom1-thumb.jpg",
-        "bedroom2": "/images/properties/prop5/bedroom2.jpg",
-        "bedroom2Thumb": "/images/properties/prop5/bedroom2-thumb.jpg",
         "bathroom": "/images/properties/prop5/bathroom.jpg",
         "bathroomThumb": "/images/properties/prop5/bathroom-thumb.jpg",
         "floorplan": "/images/properties/prop5/floorplan.jpg"
@@ -168,6 +164,34 @@
         "month": "November",
         "day": 25,
         "year": 2024
+      }
+    },
+    {
+      "id": "prop6",
+      "type": "Flat",
+      "bedrooms": 2,
+      "price": 20300000000,
+      "tenure": "Leasehold",
+      "description": "Cozy two-bedroom flat perfect for small families...",
+      "location": "Colombo, Sri Lanka",
+      "picture": "images/prop6pic1small.jpg",
+      "coordinates": {
+        "latitude": 6.9271,
+        "longitude": 79.8612
+      }
+    },
+    {
+      "id": "prop7",
+      "type": "House",
+      "bedrooms": 6,
+      "price": 92000000000,
+      "tenure": "Freehold",
+      "description": "Spacious six-bedroom house ideal for large families...",
+      "location": "Colombo, Sri Lanka",
+      "picture": "images/prop7pic1small.jpg",
+      "coordinates": {
+        "latitude": 6.9271,
+        "longitude": 79.8612
       }
     }
   ]

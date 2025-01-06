@@ -6,21 +6,21 @@ import { HTML5Backend } from "react-dnd-html5-backend";
 import SearchPage from "./components/SearchPage";
 import PropertyDetails from "./components/PropertyDetails";
 import NavBar from "./components/NavBar"; // Import NavBar
+import About from "./components/About"; // Import About
+import Contact from "./components/contact"; // Import Contact
+import SignUp from "./components/SignUp"; // Import SignUp
 import "./App.css";
 
 function App() {
-  // Load favorites from localStorage or initialize as an empty array
   const [favorites, setFavorites] = useState(() => {
     const savedFavorites = localStorage.getItem("favorites");
     return savedFavorites ? JSON.parse(savedFavorites) : [];
   });
 
-  // Update localStorage whenever the favorites state changes
   useEffect(() => {
     localStorage.setItem("favorites", JSON.stringify(favorites));
   }, [favorites]);
 
-  // Add a property to favorites if it's not already added
   const handleAddToFavorites = (property) => {
     setFavorites((prevFavorites) => {
       if (!prevFavorites.some((fav) => fav.id === property.id)) {
@@ -30,14 +30,12 @@ function App() {
     });
   };
 
-  // Remove a property from favorites by ID
   const handleRemoveFavorite = (propertyId) => {
     setFavorites((prevFavorites) =>
       prevFavorites.filter((property) => property.id !== propertyId)
     );
   };
 
-  // Clear all favorites
   const handleClearFavorites = () => {
     setFavorites([]);
   };
@@ -46,40 +44,20 @@ function App() {
     <DndProvider backend={HTML5Backend}>
       <Router>
         <div className="app">
-          {/* Header Section */}
           <header className="app-header">
-            
             <NavBar /> {/* Navigation Bar */}
           </header>
 
-          {/* Main Content */}
           <main className="app-main">
             <Routes>
-              <Route
-                path="/"
-                element={
-                  <SearchPage
-                    favorites={favorites}
-                    onAddToFavorites={handleAddToFavorites}
-                    onRemoveFavorite={handleRemoveFavorite}
-                    onClearFavorites={handleClearFavorites}
-                  />
-                }
-              />
-              <Route
-                path="/property/:id"
-                element={
-                  <PropertyDetails
-                    favorites={favorites}
-                    onAddToFavorites={handleAddToFavorites}
-                    onRemoveFavorite={handleRemoveFavorite}
-                  />
-                }
-              />
+              <Route path="/" element={<SearchPage favorites={favorites} onAddToFavorites={handleAddToFavorites} onRemoveFavorite={handleRemoveFavorite} onClearFavorites={handleClearFavorites} />} />
+              <Route path="/property/:id" element={<PropertyDetails favorites={favorites} onAddToFavorites={handleAddToFavorites} onRemoveFavorite={handleRemoveFavorite} />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/signup" element={<SignUp />} /> {/* SignUp Route */}
             </Routes>
           </main>
 
-          {/* Footer Section */}
           <footer className="app-footer">
             <p>&copy; {new Date().getFullYear()} Estate Explorer. All rights reserved.</p>
           </footer>
