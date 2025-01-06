@@ -48,6 +48,7 @@ function App() {
         <div className="app">
           {/* Header Section */}
           <header className="app-header">
+            
             <NavBar /> {/* Navigation Bar */}
           </header>
 
