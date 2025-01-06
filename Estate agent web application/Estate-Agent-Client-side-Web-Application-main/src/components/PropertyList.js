@@ -20,7 +20,7 @@ const PropertyCard = ({ property, onAddToFavorites }) => {
       <img src={property.picture} alt={property.description} className="property-image" />
       <div className="property-info">
         <h3>{property.type} - {property.bedrooms} Bedrooms</h3>
-        <p className="price">£{property.price.toLocaleString()}</p>
+        <p className="price">{property.price.toLocaleString()}</p>
         <p className="location">{property.location}</p>
         <div className="property-actions">
           <Link to={`/property/${property.id}`} className="view-details">

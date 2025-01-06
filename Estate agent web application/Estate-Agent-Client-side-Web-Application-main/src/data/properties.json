@@ -4,14 +4,14 @@
       "id": "prop1",
       "type": "House",
       "bedrooms": 3,
-      "price": 750000,
+      "price": 44400000000,  
       "tenure": "Freehold",
       "description": "Attractive three bedroom semi-detached family home situated within 0.5 miles of Petts Wood station with fast trains to London and within easy walking distance of local shops, schools, bus routes and National Trust woodland. The property comprises; two receptions, fitted 18'9 x 10'1 kitchen/breakfast room and conservatory...",
-      "location": "Petts Wood Road, Petts Wood, Orpington BR5",
+      "location": "Colombo, Sri Lanka",
       "picture": "images/prop1pic1small.jpg",
       "coordinates": {
-        "latitude": 51.3897,
-        "longitude": 0.0745
+        "latitude": 6.9271,
+        "longitude": 79.8612
       },
       "images": {
         "main": "/images/properties/prop1/main.jpg",
@@ -38,14 +38,14 @@
       "id": "prop2",
       "type": "Flat",
       "bedrooms": 2,
-      "price": 399995,
+      "price": 23679760000,  
       "tenure": "Freehold",
       "description": "Presented in excellent decorative order throughout is this two double bedroom, two bathroom, garden flat...",
-      "location": "Crofton Road Orpington BR6",
+      "location": "Colombo, Sri Lanka",
       "picture": "images/prop2pic1small.jpg",
       "coordinates": {
-        "latitude": 51.3729,
-        "longitude": 0.0899
+        "latitude": 6.9271,
+        "longitude": 79.8612
       },
       "images": {
         "main": "/images/properties/prop2/main.jpg",
@@ -72,14 +72,14 @@
       "id": "prop3",
       "type": "House",
       "bedrooms": 4,
-      "price": 925000,
+      "price": 54760000000,  
       "tenure": "Freehold",
       "description": "Stunning four bedroom detached house with modern amenities...",
-      "location": "Chislehurst Road, Bromley BR1",
+      "location": "Colombo, Sri Lanka",
       "picture": "images/prop3pic1small.jpg",
       "coordinates": {
-        "latitude": 51.3422,
-        "longitude": 0.0700
+        "latitude": 6.9271,
+        "longitude": 79.8612
       },
       "images": {
         "main": "/images/properties/prop3/main.jpg",
@@ -106,14 +106,14 @@
       "id": "prop4",
       "type": "Flat",
       "bedrooms": 1,
-      "price": 275000,
+      "price": 16280000000,  
       "tenure": "Leasehold",
       "description": "Modern one bedroom apartment in the heart of the city...",
-      "location": "High Street, Bromley BR1",
+      "location": "Colombo, Sri Lanka",
       "picture": "images/prop4pic1small.jpg",
       "coordinates": {
-        "latitude": 51.2100,
-        "longitude": 0.0655
+        "latitude": 6.9271,
+        "longitude": 79.8612
       },
       "images": {
         "main": "/images/properties/prop4/main.jpg",
@@ -140,14 +140,14 @@
       "id": "prop5",
       "type": "House",
       "bedrooms": 5,
-      "price": 1250000,
+      "price": 73920000000,  
       "tenure": "Freehold",
       "description": "Luxurious five bedroom detached house with extensive gardens...",
-      "location": "Warren Road, Hayes BR2",
+      "location": "Colombo, Sri Lanka",
       "picture": "images/prop5pic1small.jpg",
       "coordinates": {
-        "latitude": 51.4300,
-        "longitude": 0.0755
+        "latitude": 6.9271,
+        "longitude": 79.8612
       },
       "images": {
         "main": "/images/properties/prop5/main.jpg",
@@ -166,75 +166,7 @@
       },
       "added": {
         "month": "November",
-        "day": 20,
-        "year": 2024
-      }
-    },
-    {
-      "id": "prop6",
-      "type": "Flat",
-      "bedrooms": 3,
-      "price": 550000,
-      "tenure": "Leasehold",
-      "description": "Spacious three bedroom penthouse apartment with panoramic views...",
-      "location": "Station Square, Petts Wood BR5",
-      "picture": "images/prop6pic1small.jpg",
-      "coordinates": {
-        "latitude": 51.3321,
-        "longitude": 0.0866
-      },
-      "images": {
-        "main": "/images/properties/prop6/main.jpg",
-        "mainThumb": "/images/properties/prop6/main-thumb.jpg",
-        "living": "/images/properties/prop6/living.jpg",
-        "livingThumb": "/images/properties/prop6/living-thumb.jpg",
-        "kitchen": "/images/properties/prop6/kitchen.jpg",
-        "kitchenThumb": "/images/properties/prop6/kitchen-thumb.jpg",
-        "bedroom1": "/images/properties/prop6/bedroom1.jpg",
-        "bedroom1Thumb": "/images/properties/prop6/bedroom1-thumb.jpg",
-        "bedroom2": "/images/properties/prop6/bedroom2.jpg",
-        "bedroom2Thumb": "/images/properties/prop6/bedroom2-thumb.jpg",
-        "bathroom": "/images/properties/prop6/bathroom.jpg",
-        "bathroomThumb": "/images/properties/prop6/bathroom-thumb.jpg",
-        "floorplan": "/images/properties/prop6/floorplan.jpg"
-      },
-      "added": {
-        "month": "October",
         "day": 25,
-        "year": 2024
-      }
-    },
-    {
-      "id": "prop7",
-      "type": "House",
-      "bedrooms": 2,
-      "price": 425000,
-      "tenure": "Freehold",
-      "description": "Charming two bedroom cottage with period features...",
-      "location": "High Street, Chislehurst BR7",
-      "picture": "images/prop7pic1small.jpg",
-      "coordinates": {
-        "latitude": 51.4200,
-        "longitude": 0.0900
-      },
-      "images": {
-        "main": "/images/properties/prop7/main.jpg",
-        "mainThumb": "/images/properties/prop7/main-thumb.jpg",
-        "living": "/images/properties/prop7/living.jpg",
-        "livingThumb": "/images/properties/prop7/living-thumb.jpg",
-        "kitchen": "/images/properties/prop7/kitchen.jpg",
-        "kitchenThumb": "/images/properties/prop7/kitchen-thumb.jpg",
-        "bedroom1": "/images/properties/prop7/bedroom1.jpg",
-        "bedroom1Thumb": "/images/properties/prop7/bedroom1-thumb.jpg",
-        "bedroom2": "/images/properties/prop7/bedroom2.jpg",
-        "bedroom2Thumb": "/images/properties/prop7/bedroom2-thumb.jpg",
-        "bathroom": "/images/properties/prop7/bathroom.jpg",
-        "bathroomThumb": "/images/properties/prop7/bathroom-thumb.jpg",
-        "floorplan": "/images/properties/prop7/floorplan.jpg"
-      },
-      "added": {
-        "month": "December",
-        "day": 10,
         "year": 2024
       }
     }

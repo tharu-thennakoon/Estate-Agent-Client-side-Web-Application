@@ -76,7 +76,7 @@ const PropertyDetails = ({ favorites, onAddToFavorites, onRemoveFavorite }) => {
             {isFavorite ? 'Remove from Favorites' : 'Add to Favorites'}
           </button>
         </div>
-        <p className="price">£{property.price.toLocaleString()}</p>
+        <p className="price">{property.price.toLocaleString()}</p>
         <p className="location">{property.location}</p>
       </div>
 

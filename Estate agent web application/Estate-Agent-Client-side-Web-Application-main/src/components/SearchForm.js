@@ -21,107 +21,120 @@ const SearchForm = ({ onSearch }) => {
     { value: 'Flat', label: 'Flat' }
   ];
 
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prevState => ({
+      ...prevState,
+      [name]: value
+    }));
+  };
+
+  const handleSelectChange = (selectedOption, actionMeta) => {
+    setFormData(prevState => ({
+      ...prevState,
+      [actionMeta.name]: selectedOption ? selectedOption.value : ''
+    }));
+  };
+
+  const handleDateChange = (date) => {
+    setFormData(prevState => ({
+      ...prevState,
+      dateAfter: date
+    }));
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     onSearch(formData);
   };
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-  };
-
-  const handleTypeChange = (selectedOption) => {
-    setFormData(prev => ({ ...prev, type: selectedOption.value }));
-  };
-
-  const handleDateChange = (date) => {
-    setFormData(prev => ({ ...prev, dateAfter: date }));
-  };
-
   return (
     <form onSubmit={handleSubmit} className="search-form">
-      <div className="form-row">
-        <div className="form-group">
-          <label>Property Type</label>
-          <Select
-            options={propertyTypes}
-            onChange={handleTypeChange}
-            defaultValue={propertyTypes[0]}
-            className="react-select"
-          />
-        </div>
-
-        <div className="form-group">
-          <label>Price Range</label>
-          <div className="price-inputs">
-            <input
-              type="number"
-              name="minPrice"
-              placeholder="Min Price"
-              value={formData.minPrice}
-              onChange={handleChange}
-            />
-            <input
-              type="number"
-              name="maxPrice"
-              placeholder="Max Price"
-              value={formData.maxPrice}
-              onChange={handleChange}
-            />
-          </div>
-        </div>
+      <div className="form-group">
+        <label htmlFor="type">Property Type</label>
+        <Select
+          id="type"
+          name="type"
+          options={propertyTypes}
+          value={propertyTypes.find(option => option.value === formData.type)}
+          onChange={handleSelectChange}
+          placeholder="Select Property Type"
+        />
+      </div>
+      
+      <div className="form-group">
+        <label htmlFor="minPrice">Min Price</label>
+        <input
+          type="number"
+          id="minPrice"
+          name="minPrice"
+          value={formData.minPrice}
+          onChange={handleChange}
+          placeholder="Min Price"
+        />
       </div>
 
-      <div className="form-row">
-        <div className="form-group">
-          <label>Bedrooms</label>
-          <div className="bedroom-inputs">
-            <input
-              type="number"
-              name="minBedrooms"
-              placeholder="Min Bedrooms"
-              value={formData.minBedrooms}
-              onChange={handleChange}
-              min="0"
-            />
-            <input
-              type="number"
-              name="maxBedrooms"
-              placeholder="Max Bedrooms"
-              value={formData.maxBedrooms}
-              onChange={handleChange}
-              min="0"
-            />
-          </div>
-        </div>
-
-        <div className="form-group">
-          <label>Postcode Area</label>
-          <input
-            type="text"
-            name="postcode"
-            placeholder="e.g. BR1, NW1"
-            value={formData.postcode}
-            onChange={handleChange}
-          />
-        </div>
+      <div className="form-group">
+        <label htmlFor="maxPrice">Max Price</label>
+        <input
+          type="number"
+          id="maxPrice"
+          name="maxPrice"
+          value={formData.maxPrice}
+          onChange={handleChange}
+          placeholder="Max Price"
+        />
       </div>
 
-      <div className="form-row">
-        <div className="form-group">
-          <label>Added After Date</label>
-          <DatePicker
-            selected={formData.dateAfter}
-            onChange={handleDateChange}
-            dateFormat="dd/MM/yyyy"
-            placeholderText="Select Date"
-            className="date-picker"
-          />
-        </div>
+      <div className="form-group">
+        <label htmlFor="minBedrooms">Min Bedrooms</label>
+        <input
+          type="number"
+          id="minBedrooms"
+          name="minBedrooms"
+          value={formData.minBedrooms}
+          onChange={handleChange}
+          placeholder="Min Bedrooms"
+        />
       </div>
 
-      <button type="submit" className="search-button">Search Properties</button>
+      <div className="form-group">
+        <label htmlFor="maxBedrooms">Max Bedrooms</label>
+        <input
+          type="number"
+          id="maxBedrooms"
+          name="maxBedrooms"
+          value={formData.maxBedrooms}
+          onChange={handleChange}
+          placeholder="Max Bedrooms"
+        />
+      </div>
+
+      <div className="form-group">
+        <label htmlFor="postcode">Postcode</label>
+        <input
+          type="text"
+          id="postcode"
+          name="postcode"
+          value={formData.postcode}
+          onChange={handleChange}
+          placeholder="Postcode"
+        />
+      </div>
+
+      <div className="form-group">
+        <label htmlFor="dateAfter">Date Added After</label>
+        <DatePicker
+          id="dateAfter"
+          name="dateAfter"
+          selected={formData.dateAfter}
+          onChange={handleDateChange}
+          dateFormat="yyyy/MM/dd"
+          placeholderText="Select a Date"
+        />
+      </div>
+
+      <button type="submit" className="btn-search">Search</button>
     </form>
   );
 };
