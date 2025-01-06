@@ -33,7 +33,7 @@ const FavoritesList = ({ favorites, onRemove, onClear, onAddToFavorites }) => {
               <div className="favorite-info">
                 <Link to={`/property/${property.id}`}>
                   <h4>{property.type} - {property.bedrooms} bed</h4>
-                  <p>£{property.price.toLocaleString()}</p>
+                  <p>{property.price.toLocaleString()}</p>
                 </Link>
                 <button
                   onClick={() => onRemove(property.id)}
